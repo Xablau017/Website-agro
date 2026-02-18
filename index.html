@@ -393,7 +393,7 @@
         display: block;
         width: 25px;
         height: 3px;
-        background: white;
+        background: #a5d6a7;
         border-radius: 3px;
         transition: all 0.3s;
       }
@@ -785,7 +785,7 @@
       </p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
       // Hamburger menu
       const hamburger = document.getElementById('hamburger');
       const navLinks = document.getElementById('nav-links');
@@ -819,4 +819,8 @@
 
       // Função para enviar formulário
       function enviarFormulario(e) {
+        e.preventDefault();
+        alert('Obrigado! Em breve entraremos em contato.');
+        e.target.reset();
       }
+    
