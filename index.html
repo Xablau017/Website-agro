@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AgroDrone - Pulverização com Drones</title>
+    <title>AgroDroneTechnology - Pulverização com Drones</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
@@ -378,6 +378,38 @@
         color: #66bb6a;
       }
 
+      /* Hamburger Button */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        background: none;
+        border: none;
+        padding: 4px;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 3px;
+        transition: all 0.3s;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
       /* Responsive */
       @media (max-width: 768px) {
         .hero h1 {
@@ -394,13 +426,40 @@
           grid-template-columns: 1fr;
         }
 
-        .nav-links {
-          gap: 1rem;
-          font-size: 0.9rem;
-        }
-
         h2 {
           font-size: 2rem;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%);
+          flex-direction: column;
+          gap: 0;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-links.open {
+          display: flex;
+        }
+
+        .nav-links li a {
+          display: block;
+          padding: 1rem 2rem;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn {
+          background: #2e7d32;
+          color: white;
+          border: 2px solid white;
         }
       }
     </style>
@@ -410,7 +469,12 @@
     <header>
       <nav>
         <div class="logo"><i class="fas fa-helicopter"></i> AgroDrone</div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
           <li><a href="#home">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
@@ -434,19 +498,13 @@
       <div class="sobre-content">
         <div class="sobre-text">
           <p>
-            A <strong>AgroDrone</strong> é líder em soluções de pulverização
-            agrícola com drones, revolucionando o agronegócio brasileiro com
-            tecnologia de precisão.
+            <strong></strong> Aqui podemos escrever uma introdução sobre a
+            empresa, cultura e valores por exemplo
           </p>
+          <p>Ou falar da forma que você pretende trabalhar com cada cliente</p>
           <p>
-            Oferecemos serviços especializados de aplicação de defensivos,
-            fertilizantes e sementes utilizando drones de última geração,
-            garantindo eficiência, economia e sustentabilidade.
-          </p>
-          <p>
-            Nossa equipe é formada por pilotos certificados pela ANAC e
-            agrônomos especializados, prontos para atender desde pequenas
-            propriedades até grandes fazendas.
+            Falar da sua certificação ou dos cursos de drone que você fez, acho
+            que ia ser interessante!
           </p>
         </div>
         <div class="sobre-image">
@@ -457,7 +515,10 @@
 
     <!-- Serviços -->
     <section id="servicos">
-      <h2>Nossos Serviços</h2>
+      <h2>
+        Nossos Serviços(É importante ter uma parte assim pra mostrar o tamanho
+        da empresa)
+      </h2>
       <div class="servicos-grid">
         <div class="servico-card">
           <i class="fas fa-spray-can"></i>
@@ -511,11 +572,13 @@
 
     <!-- Drones -->
     <section id="drones">
-      <h2>Nossa Frota de Drones</h2>
+      <h2>
+        Nossa Frota de Drones(coloquei varios mais acho que vamos ter só um?)
+      </h2>
       <div class="drones-grid">
         <div class="drone-card">
           <i class="fas fa-helicopter"></i>
-          <h3>AgroDrone Pro 10</h3>
+          <h3>Drone 1</h3>
           <p class="tipo">Drone de Pulverização</p>
           <ul>
             <li><i class="fas fa-check"></i> Capacidade: 10 litros</li>
@@ -528,7 +591,7 @@
         </div>
         <div class="drone-card">
           <i class="fas fa-helicopter"></i>
-          <h3>AgroDrone Max 20</h3>
+          <h3>Drone 2</h3>
           <p class="tipo">Drone de Pulverização</p>
           <ul>
             <li><i class="fas fa-check"></i> Capacidade: 20 litros</li>
@@ -541,7 +604,7 @@
         </div>
         <div class="drone-card">
           <i class="fas fa-helicopter"></i>
-          <h3>AgroDrone Ultra 30</h3>
+          <h3>Drone 3</h3>
           <p class="tipo">Drone de Pulverização</p>
           <ul>
             <li><i class="fas fa-check"></i> Capacidade: 30 litros</li>
@@ -601,6 +664,10 @@
     <!-- Diferenciais -->
     <section id="diferenciais">
       <h2>Nossos Diferenciais</h2>
+      <h3>
+        Acho que da pra colocar um vídeo do drone trabalhando para dar uma
+        demonstração pra quem ainda não conheçe a tecnologia
+      </h3>
       <div class="diferenciais-grid">
         <div class="diferencial-item">
           <i class="fas fa-certificate"></i>
@@ -645,35 +712,35 @@
             <i class="fas fa-map-marker-alt"></i>
             <div>
               <strong>Endereço:</strong><br />
-              Av. das Nações, 1500 - Ribeirão Preto, SP
+              Av. das Nações, 1500 - Maringá, Pr
             </div>
           </div>
           <div class="contato-item">
             <i class="fas fa-phone"></i>
             <div>
               <strong>Telefone:</strong><br />
-              (16) 3400-0000
+              (44) 3225-1234
             </div>
           </div>
           <div class="contato-item">
-            <i class="fas fa-whatsapp"></i>
+            <i class="fas fa-comment-dots"></i>
             <div>
               <strong>WhatsApp:</strong><br />
-              (16) 99999-0000
+              (44) 91234-5678
             </div>
           </div>
           <div class="contato-item">
             <i class="fas fa-envelope"></i>
             <div>
               <strong>E-mail:</strong><br />
-              contato@agrodrone.com.br
+              <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cfaca0a1bbaebba08faea8bda0abbda0a1aae1aca0a2e1adbd">[email&#160;protected]</a>
             </div>
           </div>
           <div class="contato-item">
             <i class="fas fa-clock"></i>
             <div>
               <strong>Horário:</strong><br />
-              Seg - Sex: 7h às 18h | Sáb: 7h às 12h
+              Seg - Sab: 8h às 18h
             </div>
           </div>
         </div>
@@ -718,7 +785,24 @@
       </p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      // Hamburger menu
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        });
+      });
+
       // Smooth scroll
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -735,12 +819,4 @@
 
       // Função para enviar formulário
       function enviarFormulario(e) {
-        e.preventDefault();
-        alert(
-          "Obrigado pelo contato! Nossa equipe entrará em contato em breve para agendar uma demonstração.",
-        );
-        e.target.reset();
       }
-    </script>
-  </body>
-</html>
