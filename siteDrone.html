@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroDroneTechnology - Pulverização com Drones</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.3s;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.8;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%);
+        color: white;
+        padding: 150px 2rem 100px;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: white;
+        color: #1a472a;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: transform 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Sections */
+      section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 2rem;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #1a472a;
+      }
+
+      /* Sobre */
+      .sobre-content {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .sobre-text {
+        flex: 1;
+      }
+
+      .sobre-text p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .sobre-image {
+        flex: 1;
+        text-align: center;
+      }
+
+      .sobre-image i {
+        font-size: 15rem;
+        color: #2e7d32;
+        opacity: 0.2;
+      }
+
+      /* Serviços */
+      .servicos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .servico-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+        border-top: 4px solid #2e7d32;
+      }
+
+      .servico-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .servico-card i {
+        font-size: 3rem;
+        color: #2e7d32;
+        margin-bottom: 1rem;
+      }
+
+      .servico-card h3 {
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      /* Vantagens */
+      #vantagens {
+        background: #e8f5e9;
+      }
+
+      .vantagens-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .vantagem-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .vantagem-item i {
+        font-size: 2.5rem;
+        color: #2e7d32;
+        margin-bottom: 1rem;
+      }
+
+      .vantagem-item h3 {
+        margin-bottom: 0.5rem;
+        color: #1a472a;
+      }
+
+      .vantagem-item .destaque {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #2e7d32;
+        margin: 0.5rem 0;
+      }
+
+      /* Drones */
+      #drones {
+        background: #f5f5f5;
+      }
+
+      .drones-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .drone-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .drone-card i {
+        font-size: 5rem;
+        color: #2e7d32;
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .drone-card h3 {
+        color: #1a472a;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      .drone-card .tipo {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+      }
+
+      .drone-card ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .drone-card ul li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .drone-card ul li:last-child {
+        border-bottom: none;
+      }
+
+      .drone-card ul li i {
+        font-size: 1rem;
+        color: #2e7d32;
+        margin-right: 0.5rem;
+        display: inline;
+      }
+
+      /* Diferenciais */
+      .diferenciais-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .diferencial-item {
+        text-align: center;
+        padding: 1.5rem;
+      }
+
+      .diferencial-item i {
+        font-size: 2.5rem;
+        color: #1a472a;
+        margin-bottom: 1rem;
+      }
+
+      .diferencial-item h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Contato */
+      .contato-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+
+      .contato-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .contato-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .contato-item i {
+        font-size: 1.5rem;
+        color: #2e7d32;
+        width: 30px;
+      }
+
+      .contato-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .contato-form input,
+      .contato-form textarea,
+      .contato-form select {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+
+      .contato-form textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .btn-submit {
+        background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
+      footer {
+        background: #1a472a;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: #66bb6a;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .sobre-content,
+        .contato-content {
+          flex-direction: column;
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          gap: 1rem;
+          font-size: 0.9rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo"><i class="fas fa-helicopter"></i> AgroDrone</div>
+        <ul class="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#drones">Drones</a></li>
+          <li><a href="#vantagens">Vantagens</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Pulverização Inteligente com Drones</h1>
+      <p>Tecnologia de ponta para o agronegócio moderno e sustentável</p>
+      <a href="#contato" class="btn">Solicite uma Demonstração</a>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+      <h2>Sobre a AgroDrone</h2>
+      <div class="sobre-content">
+        <div class="sobre-text">
+          <p>
+            <strong></strong> Aqui podemos escrever uma introdução sobre a
+            empresa, cultura e valores por exemplo
+          </p>
+          <p>Ou falar da forma que você pretende trabalhar com cada cliente</p>
+          <p>
+            Falar da sua certificação ou dos cursos de drone que você fez, acho
+            que ia ser interessante!
+          </p>
+        </div>
+        <div class="sobre-image">
+          <i class="fas fa-helicopter"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+      <h2>
+        Nossos Serviços(É importante ter uma parte assim pra mostrar o tamanho
+        da empresa)
+      </h2>
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <i class="fas fa-spray-can"></i>
+          <h3>Pulverização de Precisão</h3>
+          <p>
+            Aplicação controlada de defensivos agrícolas com tecnologia GPS e
+            sensores inteligentes.
+          </p>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-seedling"></i>
+          <h3>Semeadura com Drones</h3>
+          <p>
+            Plantio aéreo de sementes em áreas de difícil acesso ou terrenos
+            irregulares.
+          </p>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Adubação Foliar</h3>
+          <p>
+            Distribuição uniforme de fertilizantes líquidos e nutrientes
+            foliares.
+          </p>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-bug"></i>
+          <h3>Controle de Pragas</h3>
+          <p>
+            Combate eficiente a pragas e doenças com aplicação direcionada e
+            econômica.
+          </p>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-camera"></i>
+          <h3>Mapeamento e Análise</h3>
+          <p>
+            Imageamento multiespectral para monitoramento de lavouras e
+            identificação de problemas.
+          </p>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Treinamento e Capacitação</h3>
+          <p>
+            Cursos para formação de pilotos e operadores de drones agrícolas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drones -->
+    <section id="drones">
+      <h2>
+        Nossa Frota de Drones(coloquei varios mais acho que vamos ter só um?)
+      </h2>
+      <div class="drones-grid">
+        <div class="drone-card">
+          <i class="fas fa-helicopter"></i>
+          <h3>Drone 1</h3>
+          <p class="tipo">Drone de Pulverização</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Capacidade: 10 litros</li>
+            <li><i class="fas fa-check"></i> Autonomia: 15-20 minutos</li>
+            <li><i class="fas fa-check"></i> Cobertura: até 1 hectare/hora</li>
+            <li><i class="fas fa-check"></i> GPS RTK de alta precisão</li>
+            <li><i class="fas fa-check"></i> Sistema anti-deriva</li>
+            <li><i class="fas fa-check"></i> Ideal para pequenas áreas</li>
+          </ul>
+        </div>
+        <div class="drone-card">
+          <i class="fas fa-helicopter"></i>
+          <h3>Drone 2</h3>
+          <p class="tipo">Drone de Pulverização</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Capacidade: 20 litros</li>
+            <li><i class="fas fa-check"></i> Autonomia: 18-25 minutos</li>
+            <li><i class="fas fa-check"></i> Cobertura: até 2 hectares/hora</li>
+            <li><i class="fas fa-check"></i> Radar de terreno</li>
+            <li><i class="fas fa-check"></i> Bicos inteligentes</li>
+            <li><i class="fas fa-check"></i> Ideal para médias propriedades</li>
+          </ul>
+        </div>
+        <div class="drone-card">
+          <i class="fas fa-helicopter"></i>
+          <h3>Drone 3</h3>
+          <p class="tipo">Drone de Pulverização</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Capacidade: 30 litros</li>
+            <li><i class="fas fa-check"></i> Autonomia: 20-30 minutos</li>
+            <li><i class="fas fa-check"></i> Cobertura: até 3 hectares/hora</li>
+            <li><i class="fas fa-check"></i> Sistema de voo autônomo</li>
+            <li><i class="fas fa-check"></i> Sensores multiespectrais</li>
+            <li><i class="fas fa-check"></i> Ideal para grandes fazendas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vantagens -->
+    <section id="vantagens">
+      <h2>Vantagens dos Drones Agrícolas</h2>
+      <div class="vantagens-grid">
+        <div class="vantagem-item">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>Economia</h3>
+          <p class="destaque">Até 90%</p>
+          <p>Redução no uso de água e defensivos</p>
+        </div>
+        <div class="vantagem-item">
+          <i class="fas fa-tachometer-alt"></i>
+          <h3>Eficiência</h3>
+          <p class="destaque">5x mais rápido</p>
+          <p>Comparado à pulverização manual</p>
+        </div>
+        <div class="vantagem-item">
+          <i class="fas fa-bullseye"></i>
+          <h3>Precisão</h3>
+          <p class="destaque">±10cm</p>
+          <p>Precisão GPS RTK na aplicação</p>
+        </div>
+        <div class="vantagem-item">
+          <i class="fas fa-leaf"></i>
+          <h3>Sustentabilidade</h3>
+          <p class="destaque">Zero emissões</p>
+          <p>Operação elétrica e limpa</p>
+        </div>
+        <div class="vantagem-item">
+          <i class="fas fa-mountain"></i>
+          <h3>Versatilidade</h3>
+          <p class="destaque">100%</p>
+          <p>Acesso a terrenos irregulares</p>
+        </div>
+        <div class="vantagem-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Segurança</h3>
+          <p class="destaque">Sem riscos</p>
+          <p>Operador longe da área de aplicação</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais">
+      <h2>Nossos Diferenciais</h2>
+      <h3>
+        Acho que da pra colocar um vídeo do drone trabalhando para dar uma
+        demonstração pra quem ainda não conheçe a tecnologia
+      </h3>
+      <div class="diferenciais-grid">
+        <div class="diferencial-item">
+          <i class="fas fa-certificate"></i>
+          <h3>Certificação ANAC</h3>
+          <p>Pilotos certificados e operação regulamentada</p>
+        </div>
+        <div class="diferencial-item">
+          <i class="fas fa-user-md"></i>
+          <h3>Suporte Agronômico</h3>
+          <p>Acompanhamento técnico especializado</p>
+        </div>
+        <div class="diferencial-item">
+          <i class="fas fa-robot"></i>
+          <h3>Tecnologia de Ponta</h3>
+          <p>Drones com IA e sensores avançados</p>
+        </div>
+        <div class="diferencial-item">
+          <i class="fas fa-chart-line"></i>
+          <h3>Relatórios Detalhados</h3>
+          <p>Dados e análises de cada aplicação</p>
+        </div>
+        <div class="diferencial-item">
+          <i class="fas fa-headset"></i>
+          <h3>Suporte 24/7</h3>
+          <p>Atendimento rápido em momentos críticos</p>
+        </div>
+        <div class="diferencial-item">
+          <i class="fas fa-handshake"></i>
+          <h3>Parceria de Longo Prazo</h3>
+          <p>Relacionamento próximo com produtores</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Solicite um Orçamento</h2>
+      <div class="contato-content">
+        <div class="contato-info">
+          <h3>Fale Conosco</h3>
+          <div class="contato-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Endereço:</strong><br />
+              Av. das Nações, 1500 - Maringá, Pr
+            </div>
+          </div>
+          <div class="contato-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Telefone:</strong><br />
+              (44) 3225-1234
+            </div>
+          </div>
+          <div class="contato-item">
+            <i class="fas fa-comment-dots"></i>
+            <div>
+              <strong>WhatsApp:</strong><br />
+              (44) 91234-5678
+            </div>
+          </div>
+          <div class="contato-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>E-mail:</strong><br />
+              contato@agrodrone.com.br
+            </div>
+          </div>
+          <div class="contato-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Horário:</strong><br />
+              Seg - Sab: 8h às 18h
+            </div>
+          </div>
+        </div>
+        <form class="contato-form" onsubmit="enviarFormulario(event)">
+          <input type="text" placeholder="Seu Nome" required />
+          <input type="email" placeholder="Seu E-mail" required />
+          <input type="tel" placeholder="Seu Telefone/WhatsApp" required />
+          <input type="text" placeholder="Propriedade/Fazenda" />
+          <select required>
+            <option value="">Selecione o serviço desejado</option>
+            <option value="pulverizacao">Pulverização</option>
+            <option value="semeadura">Semeadura</option>
+            <option value="adubacao">Adubação</option>
+            <option value="mapeamento">Mapeamento</option>
+            <option value="treinamento">Treinamento</option>
+            <option value="outro">Outro</option>
+          </select>
+          <textarea
+            placeholder="Área aproximada (hectares) e detalhes da aplicação"
+            required
+          ></textarea>
+          <button type="submit" class="btn-submit">Solicitar Orçamento</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>
+        © 2026 AgroDrone - Pulverização Inteligente. Todos os direitos
+        reservados.
+      </p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8">
+        Pilotos Certificados ANAC | Tecnologia e Sustentabilidade para o
+        Agronegócio
+      </p>
+    </footer>
+
+    <script>
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Função para enviar formulário
+      function enviarFormulario(e) {
+        e.preventDefault();
+        alert(
+          "Obrigado pelo contato! Nossa equipe entrará em contato em breve para agendar uma demonstração.",
+        );
+        e.target.reset();
+      }
+    </script>
+  </body>
+</html>
