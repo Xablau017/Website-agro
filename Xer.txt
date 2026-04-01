@@ -1,0 +1,39 @@
+ Done. Here's a summary of all changes made:
+
+  Content fixes:
+  - Replaced placeholder "Sobre" text with the real company description
+  - Removed all developer notes/questions from visible text (services heading, drones heading, diferenciais note)
+  - Simplified drone fleet from 3 generic cards to 1 card with the correct specs
+  - Changed "Treinamento e Capacitação" to "Consultoria Técnica" with fa-comments icon and new description
+  - Updated the select dropdown option from "Treinamento" to "Consultoria Técnica"
+  - Standardized brand name to "AgroDrone" throughout
+
+  Form integration (Formspree):
+  - Set action and method="POST" on the form
+  - Added name attributes to all inputs (nome, email, telefone, fazenda, servico, mensagem)
+  - Added _subject and _next hidden fields
+  - Added #form-status div with success/error styling
+  - Replaced enviarFormulario() with fetch-based Formspree submission
+  - Left <!-- IMPORTANTE: substitua ... --> comment
+
+  Video embed:
+  - Added responsive YouTube embed above diferenciais-grid with 16:9 aspect ratio (padding-bottom: 56.25%)
+  - Added .video-caption styling
+  - Left <!-- Substitua VIDEO_ID_AQUI ... --> comment
+
+  SEO & meta:
+  - Added description, keywords, author, robots meta tags
+  - Added canonical URL and Open Graph tags
+  - Added favicon link
+  - Updated <title> to AgroDrone — Pulverização com Drones | Maringá, PR
+
+  Cleanup:
+  - Removed Cloudflare email-decode script
+  - Replaced encoded email with plain mailto: link
+  - Updated social links with real placeholder URLs and added target="_blank" rel="noopener noreferrer"
+  - Plain-text email in contact info
+  - Copyright year is 2026
+
+  Two things the owner needs to do before deploy:
+  1. Replace REPLACE_WITH_YOUR_ID in the form action with their actual Formspree ID
+  2. Replace VIDEO_ID_AQUI in the YouTube iframe with their video ID

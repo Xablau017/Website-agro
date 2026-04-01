@@ -3,7 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AgroDroneTechnology - Pulverização com Drones</title>
+    <title>AgroDrone — Pulverização com Drones | Maringá, PR</title>
+    <meta
+      name="description"
+      content="AgroDrone — pulverização agrícola com drones em Maringá e região. Tecnologia de precisão, certificação ANAC e atendimento personalizado para sua lavoura."
+    />
+    <meta
+      name="keywords"
+      content="drone agrícola, pulverização com drone, agronegócio, Maringá, Paraná, defensivos agrícolas, agricultura de precisão"
+    />
+    <meta name="author" content="AgroDrone" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://agrodrone.com.br/" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="AgroDrone — Pulverização Inteligente com Drones"
+    />
+    <meta
+      property="og:description"
+      content="Tecnologia de drones para o agronegócio paranaense. Certificação ANAC, precisão GPS e operação sustentável."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agrodrone.com.br/" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
@@ -217,6 +245,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 2rem;
+        justify-items: center;
       }
 
       .drone-card {
@@ -224,6 +253,8 @@
         padding: 2rem;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 450px;
+        width: 100%;
       }
 
       .drone-card i {
@@ -291,6 +322,39 @@
         margin-bottom: 0.5rem;
       }
 
+      /* Video Container */
+      .video-container {
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        position: relative;
+      }
+
+      .video-container .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-container .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-caption {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+      }
+
       /* Contato */
       .contato-content {
         display: grid;
@@ -351,6 +415,23 @@
 
       .btn-submit:hover {
         transform: translateY(-2px);
+      }
+
+      #form-status {
+        text-align: center;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+
+      #form-status.success {
+        color: #2e7d32;
+        background: #e8f5e9;
+      }
+
+      #form-status.error {
+        color: #c62828;
+        background: #ffebee;
       }
 
       /* Footer */
@@ -443,7 +524,7 @@
           background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%);
           flex-direction: column;
           gap: 0;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .nav-links.open {
@@ -453,7 +534,7 @@
         .nav-links li a {
           display: block;
           padding: 1rem 2rem;
-          border-bottom: 1px solid rgba(255,255,255,0.1);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .btn {
@@ -478,7 +559,7 @@
           <li><a href="#home">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#drones">Drones</a></li>
+          <li><a href="#drones">Drone</a></li>
           <li><a href="#vantagens">Vantagens</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
@@ -489,7 +570,7 @@
     <section id="home" class="hero">
       <h1>Pulverização Inteligente com Drones</h1>
       <p>Tecnologia de ponta para o agronegócio moderno e sustentável</p>
-      <a href="#contato" class="btn">Solicite uma Demonstração</a>
+      <a href="#contato" class="btn">Solicite um Orçamento</a>
     </section>
 
     <!-- Sobre -->
@@ -498,13 +579,16 @@
       <div class="sobre-content">
         <div class="sobre-text">
           <p>
-            <strong></strong> Aqui podemos escrever uma introdução sobre a
-            empresa, cultura e valores por exemplo
+            A AgroDrone é uma empresa de pilotagem de drones agrícolas com
+            certificação ANAC, especializada em pulverização de precisão para o
+            agronegócio paranaense. Operamos com tecnologia de ponta para levar
+            mais produtividade, eficiência e sustentabilidade à sua propriedade.
           </p>
-          <p>Ou falar da forma que você pretende trabalhar com cada cliente</p>
           <p>
-            Falar da sua certificação ou dos cursos de drone que você fez, acho
-            que ia ser interessante!
+            Atendemos pequenos e grandes produtores, adaptando cada serviço à
+            realidade da sua lavoura. Nossa missão é democratizar o acesso à
+            agricultura de precisão, garantindo aplicações seguras, econômicas e
+            com mínimo impacto ambiental.
           </p>
         </div>
         <div class="sobre-image">
@@ -515,10 +599,7 @@
 
     <!-- Serviços -->
     <section id="servicos">
-      <h2>
-        Nossos Serviços(É importante ter uma parte assim pra mostrar o tamanho
-        da empresa)
-      </h2>
+      <h2>Nossos Serviços</h2>
       <div class="servicos-grid">
         <div class="servico-card">
           <i class="fas fa-spray-can"></i>
@@ -561,10 +642,11 @@
           </p>
         </div>
         <div class="servico-card">
-          <i class="fas fa-graduation-cap"></i>
-          <h3>Treinamento e Capacitação</h3>
+          <i class="fas fa-comments"></i>
+          <h3>Consultoria Técnica</h3>
           <p>
-            Cursos para formação de pilotos e operadores de drones agrícolas.
+            Orientação e suporte técnico para o uso correto de insumos e
+            planejamento de aplicações.
           </p>
         </div>
       </div>
@@ -572,47 +654,26 @@
 
     <!-- Drones -->
     <section id="drones">
-      <h2>
-        Nossa Frota de Drones(coloquei varios mais acho que vamos ter só um?)
-      </h2>
+      <h2>Nosso Drone</h2>
       <div class="drones-grid">
         <div class="drone-card">
           <i class="fas fa-helicopter"></i>
-          <h3>Drone 1</h3>
-          <p class="tipo">Drone de Pulverização</p>
+          <h3>Drone Agrícola de Pulverização</h3>
+          <p class="tipo">Drone de Pulverização de Precisão</p>
           <ul>
-            <li><i class="fas fa-check"></i> Capacidade: 10 litros</li>
-            <li><i class="fas fa-check"></i> Autonomia: 15-20 minutos</li>
-            <li><i class="fas fa-check"></i> Cobertura: até 1 hectare/hora</li>
+            <li><i class="fas fa-check"></i> Capacidade de 10 litros</li>
+            <li>
+              <i class="fas fa-check"></i> Autonomia de 15–20 minutos por voo
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Cobertura de até 1 hectare/hora
+            </li>
             <li><i class="fas fa-check"></i> GPS RTK de alta precisão</li>
             <li><i class="fas fa-check"></i> Sistema anti-deriva</li>
-            <li><i class="fas fa-check"></i> Ideal para pequenas áreas</li>
-          </ul>
-        </div>
-        <div class="drone-card">
-          <i class="fas fa-helicopter"></i>
-          <h3>Drone 2</h3>
-          <p class="tipo">Drone de Pulverização</p>
-          <ul>
-            <li><i class="fas fa-check"></i> Capacidade: 20 litros</li>
-            <li><i class="fas fa-check"></i> Autonomia: 18-25 minutos</li>
-            <li><i class="fas fa-check"></i> Cobertura: até 2 hectares/hora</li>
-            <li><i class="fas fa-check"></i> Radar de terreno</li>
-            <li><i class="fas fa-check"></i> Bicos inteligentes</li>
-            <li><i class="fas fa-check"></i> Ideal para médias propriedades</li>
-          </ul>
-        </div>
-        <div class="drone-card">
-          <i class="fas fa-helicopter"></i>
-          <h3>Drone 3</h3>
-          <p class="tipo">Drone de Pulverização</p>
-          <ul>
-            <li><i class="fas fa-check"></i> Capacidade: 30 litros</li>
-            <li><i class="fas fa-check"></i> Autonomia: 20-30 minutos</li>
-            <li><i class="fas fa-check"></i> Cobertura: até 3 hectares/hora</li>
-            <li><i class="fas fa-check"></i> Sistema de voo autônomo</li>
-            <li><i class="fas fa-check"></i> Sensores multiespectrais</li>
-            <li><i class="fas fa-check"></i> Ideal para grandes fazendas</li>
+            <li>
+              <i class="fas fa-check"></i> Bicos pulverizadores inteligentes
+            </li>
+            <li><i class="fas fa-check"></i> Certificado ANAC</li>
           </ul>
         </div>
       </div>
@@ -664,10 +725,31 @@
     <!-- Diferenciais -->
     <section id="diferenciais">
       <h2>Nossos Diferenciais</h2>
-      <h3>
-        Acho que da pra colocar um vídeo do drone trabalhando para dar uma
-        demonstração pra quem ainda não conheçe a tecnologia
-      </h3>
+
+      <!-- Substitua VIDEO_ID_AQUI pelo ID do seu vídeo no YouTube -->
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+            title="AgroDrone em ação — pulverização agrícola com drone"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <p class="video-caption">
+          Veja nosso drone em ação numa aplicação real de pulverização.
+        </p>
+      </div>
+
       <div class="diferenciais-grid">
         <div class="diferencial-item">
           <i class="fas fa-certificate"></i>
@@ -711,58 +793,67 @@
           <div class="contato-item">
             <i class="fas fa-map-marker-alt"></i>
             <div>
-              <strong>Endereço:</strong><br />
-              Av. das Nações, 1500 - Maringá, Pr
-            </div>
-          </div>
-          <div class="contato-item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <strong>Telefone:</strong><br />
-              (44) 3225-1234
+              <strong>Localização:</strong><br />
+              Maringá, Paraná — BR
             </div>
           </div>
           <div class="contato-item">
             <i class="fas fa-comment-dots"></i>
             <div>
               <strong>WhatsApp:</strong><br />
-              (44) 91234-5678
+              <a href="https://wa.me/5544912345678" style="color: #2e7d32"
+                >(44) 91234-5678</a
+              >
             </div>
           </div>
           <div class="contato-item">
             <i class="fas fa-envelope"></i>
             <div>
               <strong>E-mail:</strong><br />
-              <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cfaca0a1bbaebba08faea8bda0abbda0a1aae1aca0a2e1adbd">[email&#160;protected]</a>
+              <a href="mailto:contato@agrodrone.com.br" style="color: #2e7d32"
+                >contato@agrodrone.com.br</a
+              >
             </div>
           </div>
           <div class="contato-item">
             <i class="fas fa-clock"></i>
             <div>
               <strong>Horário:</strong><br />
-              Seg - Sab: 8h às 18h
+              Segunda a Sexta, 8h às 18h
             </div>
           </div>
         </div>
-        <form class="contato-form" onsubmit="enviarFormulario(event)">
-          <input type="text" placeholder="Seu Nome" required />
-          <input type="email" placeholder="Seu E-mail" required />
-          <input type="tel" placeholder="Seu Telefone/WhatsApp" required />
-          <input type="text" placeholder="Propriedade/Fazenda" />
-          <select required>
+
+        <form
+          class="contato-form"
+          id="contato-form"
+          onsubmit="enviarFormulario(event)"
+        >
+          <input type="text" name="nome" placeholder="Seu Nome" required />
+          <input type="email" name="email" placeholder="Seu E-mail" required />
+          <input
+            type="tel"
+            name="telefone"
+            placeholder="Seu Telefone/WhatsApp"
+            required
+          />
+          <input type="text" name="fazenda" placeholder="Propriedade/Fazenda" />
+          <select name="servico" required>
             <option value="">Selecione o serviço desejado</option>
             <option value="pulverizacao">Pulverização</option>
             <option value="semeadura">Semeadura</option>
             <option value="adubacao">Adubação</option>
             <option value="mapeamento">Mapeamento</option>
-            <option value="treinamento">Treinamento</option>
+            <option value="consultoria">Consultoria Técnica</option>
             <option value="outro">Outro</option>
           </select>
           <textarea
+            name="mensagem"
             placeholder="Área aproximada (hectares) e detalhes da aplicação"
             required
           ></textarea>
           <button type="submit" class="btn-submit">Solicitar Orçamento</button>
+          <div id="form-status"></div>
         </form>
       </div>
     </section>
@@ -770,13 +861,33 @@
     <!-- Footer -->
     <footer>
       <div class="social-links">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a
+          href="https://facebook.com/agrodronemaringá"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://instagram.com/agrodronemaringá"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://youtube.com/@agrodrone"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://wa.me/5544912345678"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
       </div>
       <p>
-        © 2026 AgroDrone - Pulverização Inteligente. Todos os direitos
+        &copy; 2026 AgroDrone — Pulverização Inteligente. Todos os direitos
         reservados.
       </p>
       <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8">
@@ -785,21 +896,21 @@
       </p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
       // Hamburger menu
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('nav-links');
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
 
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("open");
       });
 
       // Close menu when a link is clicked
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navLinks.classList.remove('open');
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("open");
         });
       });
 
@@ -817,10 +928,29 @@
         });
       });
 
-      // Função para enviar formulário
+      // WhatsApp form redirect
       function enviarFormulario(e) {
         e.preventDefault();
-        alert('Obrigado! Em breve entraremos em contato.');
-        e.target.reset();
+        const form = e.target;
+        const nome = form.querySelector('[name="nome"]').value;
+        const email = form.querySelector('[name="email"]').value;
+        const telefone = form.querySelector('[name="telefone"]').value;
+        const fazenda = form.querySelector('[name="fazenda"]').value || 'Não informado';
+        const servico = form.querySelector('[name="servico"]').value;
+        const mensagem = form.querySelector('[name="mensagem"]').value;
+
+        const texto = `Olá! Gostaria de solicitar um orçamento.\n\n` +
+          `*Nome:* ${nome}\n` +
+          `*E-mail:* ${email}\n` +
+          `*Telefone:* ${telefone}\n` +
+          `*Propriedade:* ${fazenda}\n` +
+          `*Serviço:* ${servico}\n` +
+          `*Detalhes:* ${mensagem}`;
+
+        const numero = '5544912345678';
+        const url = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
+        window.open(url, '_blank');
       }
-    
+    </script>
+  </body>
+</html>
