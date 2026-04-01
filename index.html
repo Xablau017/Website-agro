@@ -830,7 +830,7 @@
           onsubmit="enviarFormulario(event)"
         >
           <input type="text" name="nome" placeholder="Seu Nome" required />
-          <input type="email" name="email" placeholder="Seu E-mail" required />
+          <input type="email" name="email" placeholder="Seu E-mail (opcional)" />
           <input
             type="tel"
             name="telefone"
@@ -935,21 +935,24 @@
         const nome = form.querySelector('[name="nome"]').value;
         const email = form.querySelector('[name="email"]').value;
         const telefone = form.querySelector('[name="telefone"]').value;
-        const fazenda = form.querySelector('[name="fazenda"]').value || 'Não informado';
+        const fazenda =
+          form.querySelector('[name="fazenda"]').value || "Não informado";
         const servico = form.querySelector('[name="servico"]').value;
         const mensagem = form.querySelector('[name="mensagem"]').value;
 
-        const texto = `Olá! Gostaria de solicitar um orçamento.\n\n` +
+        const texto =
+          `Olá! Gostaria de solicitar um orçamento.\n\n` +
           `*Nome:* ${nome}\n` +
-          `*E-mail:* ${email}\n` +
+          `*E-mail:* ${email || "Não informado"}\n` +
           `*Telefone:* ${telefone}\n` +
           `*Propriedade:* ${fazenda}\n` +
           `*Serviço:* ${servico}\n` +
           `*Detalhes:* ${mensagem}`;
 
-        const numero = '5544912345678';
-        const url = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
-        window.open(url, '_blank');
+        const numero = "5544991249988";
+        const url =
+          "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+        window.open(url, "_blank");
       }
     </script>
   </body>
