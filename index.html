@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YEDPM04ZY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7YEDPM04ZY');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AgroDrone — Pulverização com Drones | Maringá, PR</title>
@@ -14,6 +22,7 @@
     />
     <meta name="author" content="AgroDrone" />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1a472a" />
     <link rel="canonical" href="https://agrodrone.com.br/" />
 
     <!-- Open Graph -->
@@ -29,8 +38,10 @@
     <meta property="og:url" content="https://agrodrone.com.br/" />
     <meta property="og:locale" content="pt_BR" />
 
-    <!-- Favicon placeholder -->
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.png" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -43,10 +54,42 @@
         box-sizing: border-box;
       }
 
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: 9999;
+      }
+
+      .skip-link:focus {
+        left: 16px;
+        top: 16px;
+        width: auto;
+        height: auto;
+        padding: 8px 16px;
+        background: #1a472a;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
         color: #333;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid #2e7d32;
+        outline-offset: 2px;
       }
 
       /* Header */
@@ -467,7 +510,9 @@
         gap: 5px;
         background: none;
         border: none;
-        padding: 4px;
+        padding: 10px;
+        min-width: 44px;
+        min-height: 44px;
       }
 
       .hamburger span {
@@ -544,13 +589,32 @@
         }
       }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AgroDrone",
+      "description": "Pulverização agrícola com drones em Maringá e região",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Maringá",
+        "addressRegion": "PR",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5544991249988",
+      "url": "https://agrodrone.com.br"
+    }
+    </script>
+
   </head>
   <body>
+    <a href="#home" class="skip-link">Ir para conteúdo</a>
     <!-- Header -->
     <header>
       <nav>
         <div class="logo"><i class="fas fa-helicopter"></i> AgroDrone</div>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -566,6 +630,7 @@
       </nav>
     </header>
 
+    <main>
     <!-- Hero Section -->
     <section id="home" class="hero">
       <h1>Pulverização Inteligente com Drones</h1>
@@ -726,29 +791,23 @@
     <section id="diferenciais">
       <h2>Nossos Diferenciais</h2>
 
-      <!-- Substitua VIDEO_ID_AQUI pelo ID do seu vídeo no YouTube -->
-      <div class="video-container">
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-            title="AgroDrone em ação — pulverização agrícola com drone"
-            frameborder="0"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-            "
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-        <p class="video-caption">
-          Veja nosso drone em ação numa aplicação real de pulverização.
-        </p>
-      </div>
+      <!--
+        TODO: YouTube Video — Waiting on brand owner
+        Once the video ID is received:
+          1. Remove this comment block
+          2. Uncomment the iframe below
+          3. Replace VIDEO_ID_AQUI with the real YouTube video ID
+          4. The loading="lazy" attribute is already included — do not remove it
+
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+          loading="lazy"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      -->
 
       <div class="diferenciais-grid">
         <div class="diferencial-item">
@@ -801,8 +860,8 @@
             <i class="fas fa-comment-dots"></i>
             <div>
               <strong>WhatsApp:</strong><br />
-              <a href="https://wa.me/5544912345678" style="color: #2e7d32"
-                >(44) 91234-5678</a
+              <a href="https://wa.me/5544991249988" target="_blank" rel="noopener noreferrer" style="color: #2e7d32"
+                >(44) 99813-4090</
               >
             </div>
           </div>
@@ -811,7 +870,7 @@
             <div>
               <strong>E-mail:</strong><br />
               <a href="mailto:contato@agrodrone.com.br" style="color: #2e7d32"
-                >contato@agrodrone.com.br</a
+                >agrodronemrg@gmail.com</a
               >
             </div>
           </div>
@@ -829,16 +888,17 @@
           id="contato-form"
           onsubmit="enviarFormulario(event)"
         >
-          <input type="text" name="nome" placeholder="Seu Nome" required />
-          <input type="email" name="email" placeholder="Seu E-mail (opcional)" />
+          <input type="text" name="nome" aria-label="Seu Nome" placeholder="Seu Nome" required />
+          <input type="email" name="email" aria-label="Seu E-mail" placeholder="Seu E-mail (opcional)" />
           <input
             type="tel"
             name="telefone"
+            aria-label="Seu Telefone/WhatsApp"
             placeholder="Seu Telefone/WhatsApp"
             required
           />
-          <input type="text" name="fazenda" placeholder="Propriedade/Fazenda" />
-          <select name="servico" required>
+          <input type="text" name="fazenda" aria-label="Propriedade/Fazenda" placeholder="Propriedade/Fazenda" />
+          <select name="servico" aria-label="Selecione o serviço desejado" required>
             <option value="">Selecione o serviço desejado</option>
             <option value="pulverizacao">Pulverização</option>
             <option value="semeadura">Semeadura</option>
@@ -849,6 +909,7 @@
           </select>
           <textarea
             name="mensagem"
+            aria-label="Área aproximada e detalhes da aplicação"
             placeholder="Área aproximada (hectares) e detalhes da aplicação"
             required
           ></textarea>
@@ -857,6 +918,7 @@
         </form>
       </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -880,7 +942,7 @@
           ><i class="fab fa-youtube"></i
         ></a>
         <a
-          href="https://wa.me/5544912345678"
+          href="https://wa.me/5544998134090"
           target="_blank"
           rel="noopener noreferrer"
           ><i class="fab fa-whatsapp"></i
@@ -904,6 +966,8 @@
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navLinks.classList.toggle("open");
+        const isExpanded = hamburger.classList.contains("active");
+        hamburger.setAttribute("aria-expanded", isExpanded);
       });
 
       // Close menu when a link is clicked
@@ -949,9 +1013,13 @@
           `*Serviço:* ${servico}\n` +
           `*Detalhes:* ${mensagem}`;
 
-        const numero = "5544991249988";
+        const numero = "5544998134090";
         const url =
           "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+        gtag('event', 'solicitar_orcamento', {
+          event_category: 'formulario',
+          event_label: 'Botão Solicitar Orçamento'
+        });
         window.open(url, "_blank");
       }
     </script>
