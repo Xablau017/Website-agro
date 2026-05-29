@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade — AgroDrone</title>
+    <meta
+      name="description"
+      content="Política de Privacidade da AgroDrone, em conformidade com a LGPD (Lei 13.709/2018). Saiba como tratamos seus dados pessoais."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1a472a" />
+    <link rel="canonical" href="https://agrodrone.com.br/privacidade.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: 9999;
+      }
+
+      .skip-link:focus {
+        left: 16px;
+        top: 16px;
+        width: auto;
+        height: auto;
+        padding: 8px 16px;
+        background: #1a472a;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid #2e7d32;
+        outline-offset: 2px;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+      }
+
+      .voltar-link {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s;
+      }
+
+      .voltar-link:hover {
+        opacity: 0.8;
+      }
+
+      /* Hero / título */
+      .privacidade-hero {
+        background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%);
+        color: white;
+        padding: 140px 2rem 60px;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .privacidade-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .privacidade-hero p {
+        opacity: 0.9;
+      }
+
+      /* Conteúdo */
+      .conteudo {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 60px 2rem 80px;
+      }
+
+      .conteudo .intro {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+        color: #444;
+      }
+
+      .conteudo h2 {
+        color: #1a472a;
+        font-size: 1.5rem;
+        margin: 2.5rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e8f5e9;
+      }
+
+      .conteudo h2 i {
+        color: #2e7d32;
+        margin-right: 0.5rem;
+      }
+
+      .conteudo h3 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0.5rem;
+      }
+
+      .conteudo p {
+        margin-bottom: 1rem;
+      }
+
+      .conteudo ul {
+        margin: 0 0 1rem 1.5rem;
+      }
+
+      .conteudo ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .conteudo a {
+        color: #2e7d32;
+        font-weight: bold;
+      }
+
+      .destaque-box {
+        background: #e8f5e9;
+        border-left: 4px solid #2e7d32;
+        border-radius: 6px;
+        padding: 1.25rem 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .atualizado {
+        margin-top: 3rem;
+        font-style: italic;
+        color: #666;
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        background: #1a472a;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      footer a {
+        color: #a5d6a7;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .privacidade-hero h1 {
+          font-size: 1.8rem;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#conteudo" class="skip-link">Ir para conteúdo</a>
+
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="index.html" class="logo"
+          ><i class="fas fa-helicopter"></i> AgroDrone</a
+        >
+        <a href="index.html" class="voltar-link"
+          ><i class="fas fa-arrow-left"></i> Voltar ao site</a
+        >
+      </nav>
+    </header>
+
+    <!-- Título -->
+    <section class="privacidade-hero">
+      <h1>Política de Privacidade</h1>
+      <p>Tratamento de dados pessoais em conformidade com a LGPD</p>
+    </section>
+
+    <main id="conteudo" class="conteudo">
+      <p class="intro">
+        A AgroDrone respeita a sua privacidade e está comprometida com a
+        proteção dos seus dados pessoais. Esta Política de Privacidade explica
+        como coletamos, utilizamos, compartilhamos e protegemos suas
+        informações quando você acessa nosso site, em conformidade com a Lei
+        Geral de Proteção de Dados Pessoais — LGPD (Lei nº 13.709/2018).
+      </p>
+
+      <h2><i class="fas fa-id-card"></i>1. Quem é o controlador dos dados</h2>
+      <p>
+        O controlador responsável pelo tratamento dos seus dados pessoais é a
+        <strong>AgroDrone</strong>, empresa de pulverização agrícola com drones
+        sediada em <strong>Maringá — Paraná, Brasil</strong>.
+      </p>
+      <p>
+        Para qualquer assunto relacionado a esta política ou ao tratamento dos
+        seus dados, entre em contato pelo e-mail
+        <a href="mailto:agrodronemrg@gmail.com">agrodronemrg@gmail.com</a>.
+      </p>
+
+      <h2><i class="fas fa-database"></i>2. Quais dados coletamos</h2>
+
+      <h3>2.1. Dados que você nos fornece</h3>
+      <p>
+        Ao preencher o formulário de orçamento/contato em nosso site, coletamos
+        os seguintes dados:
+      </p>
+      <ul>
+        <li><strong>Nome</strong> (obrigatório);</li>
+        <li><strong>E-mail</strong> (opcional);</li>
+        <li><strong>Telefone/WhatsApp</strong> (obrigatório);</li>
+        <li><strong>Propriedade/Fazenda</strong> (opcional);</li>
+        <li><strong>Serviço de interesse</strong> (obrigatório);</li>
+        <li>
+          <strong>Mensagem</strong> com a área aproximada e detalhes da
+          aplicação (obrigatório).
+        </li>
+      </ul>
+      <p>
+        Ao enviar o formulário, esses dados são organizados em uma mensagem e
+        encaminhados para o nosso atendimento por meio do
+        <strong>WhatsApp</strong>, aplicativo operado pela Meta. O envio depende
+        de uma ação sua (abertura do WhatsApp) e está sujeito também à política
+        de privacidade da Meta.
+      </p>
+
+      <h3>2.2. Dados coletados automaticamente</h3>
+      <p>
+        Utilizamos o <strong>Google Analytics</strong> para entender como os
+        visitantes utilizam o site. Por meio de cookies e tecnologias
+        semelhantes, podem ser coletados:
+      </p>
+      <ul>
+        <li>Identificadores de cookies de análise;</li>
+        <li>Endereço IP (de forma reduzida/anonimizada pelo Google);</li>
+        <li>Tipo de dispositivo, navegador e sistema operacional;</li>
+        <li>
+          Páginas visitadas, tempo de permanência e interações (incluindo o
+          evento de clique no botão "Solicitar Orçamento").
+        </li>
+      </ul>
+      <div class="destaque-box">
+        <strong>Importante:</strong> os cookies de análise do Google Analytics
+        só são ativados <strong>após o seu consentimento</strong> no banner de
+        cookies exibido ao acessar o site. Enquanto você não aceitar, esses
+        cookies permanecem desativados.
+      </div>
+
+      <h2><i class="fas fa-bullseye"></i>3. Para que usamos os seus dados</h2>
+      <p>Utilizamos os dados coletados para as seguintes finalidades:</p>
+      <ul>
+        <li>
+          Responder às suas solicitações de orçamento e de contato, e elaborar
+          propostas de serviços;
+        </li>
+        <li>
+          Entrar em contato com você a respeito dos serviços solicitados;
+        </li>
+        <li>
+          Medir a audiência, analisar o desempenho do site e melhorar a sua
+          experiência de navegação.
+        </li>
+      </ul>
+
+      <h2><i class="fas fa-balance-scale"></i>4. Bases legais</h2>
+      <p>
+        O tratamento dos seus dados ocorre com fundamento nas seguintes bases
+        legais previstas no art. 7º da LGPD:
+      </p>
+      <ul>
+        <li>
+          <strong>Dados do formulário:</strong> execução de procedimentos
+          preliminares relacionados a um contrato a seu pedido e/ou legítimo
+          interesse em atender à sua solicitação de orçamento;
+        </li>
+        <li>
+          <strong>Cookies de análise (Google Analytics):</strong> o seu
+          <strong>consentimento</strong>, manifestado por meio do banner de
+          cookies, o qual pode ser revogado a qualquer momento.
+        </li>
+      </ul>
+
+      <h2><i class="fas fa-cookie-bite"></i>5. Cookies e tecnologias de rastreamento</h2>
+      <p>
+        Cookies são pequenos arquivos armazenados no seu dispositivo. Em nosso
+        site, utilizamos cookies de análise (Google Analytics) para fins
+        estatísticos. Não utilizamos cookies para publicidade direcionada.
+      </p>
+      <p>Você pode gerenciar suas preferências das seguintes formas:</p>
+      <ul>
+        <li>
+          Aceitando ou recusando os cookies de análise no banner de
+          consentimento exibido no site;
+        </li>
+        <li>
+          Configurando o seu navegador para bloquear ou excluir cookies;
+        </li>
+        <li>
+          Instalando o complemento de
+          <a
+            href="https://tools.google.com/dlpage/gaoptout"
+            target="_blank"
+            rel="noopener noreferrer"
+            >desativação do Google Analytics</a
+          >.
+        </li>
+      </ul>
+
+      <h2><i class="fas fa-share-nodes"></i>6. Compartilhamento e transferência internacional</h2>
+      <p>
+        Não vendemos seus dados pessoais. Podemos compartilhá-los com os
+        seguintes parceiros, estritamente para as finalidades descritas nesta
+        política:
+      </p>
+      <ul>
+        <li>
+          <strong>Google LLC</strong> — serviço de análise de tráfego (Google
+          Analytics);
+        </li>
+        <li>
+          <strong>Meta Platforms (WhatsApp)</strong> — recebimento das
+          mensagens enviadas pelo formulário e contato via botões de WhatsApp;
+        </li>
+        <li>
+          <strong>Cloudflare</strong> — entrega de recursos do site (biblioteca
+          de ícones);
+        </li>
+        <li>
+          <strong>YouTube/Google</strong> — quando vídeos forem incorporados ao
+          site.
+        </li>
+      </ul>
+      <p>
+        Alguns desses parceiros estão localizados fora do Brasil. Assim, seus
+        dados podem ser objeto de
+        <strong>transferência internacional</strong>, sempre observando as
+        garantias e salvaguardas exigidas pela LGPD.
+      </p>
+
+      <h2><i class="fas fa-user-shield"></i>7. Seus direitos como titular</h2>
+      <p>
+        Nos termos do art. 18 da LGPD, você tem o direito de, a qualquer
+        momento, solicitar:
+      </p>
+      <ul>
+        <li>A confirmação da existência de tratamento dos seus dados;</li>
+        <li>O acesso aos seus dados;</li>
+        <li>A correção de dados incompletos, inexatos ou desatualizados;</li>
+        <li>
+          A anonimização, o bloqueio ou a eliminação de dados desnecessários ou
+          tratados em desconformidade com a lei;
+        </li>
+        <li>A portabilidade dos dados;</li>
+        <li>A eliminação dos dados tratados com base no consentimento;</li>
+        <li>
+          Informação sobre as entidades com as quais compartilhamos seus dados;
+        </li>
+        <li>
+          Informação sobre a possibilidade de não fornecer consentimento e as
+          consequências da recusa;
+        </li>
+        <li>A revogação do consentimento.</li>
+      </ul>
+      <div class="destaque-box">
+        Para exercer qualquer um desses direitos, entre em contato pelo e-mail
+        <a href="mailto:agrodronemrg@gmail.com">agrodronemrg@gmail.com</a>.
+        Responderemos à sua solicitação no menor prazo possível.
+      </div>
+
+      <h2><i class="fas fa-clock"></i>8. Por quanto tempo guardamos seus dados</h2>
+      <p>
+        Mantemos os dados do formulário pelo tempo necessário ao atendimento da
+        sua solicitação e, quando aplicável, à execução do contrato e ao
+        cumprimento de obrigações legais. Os dados coletados pelo Google
+        Analytics são retidos conforme as configurações de retenção do próprio
+        Google. Após esses prazos, os dados são eliminados ou anonimizados.
+      </p>
+
+      <h2><i class="fas fa-lock"></i>9. Segurança dos dados</h2>
+      <p>
+        Adotamos medidas técnicas e administrativas razoáveis para proteger seus
+        dados pessoais contra acessos não autorizados e situações de destruição,
+        perda, alteração ou divulgação indevida.
+      </p>
+
+      <h2><i class="fas fa-child"></i>10. Crianças e adolescentes</h2>
+      <p>
+        Nosso site é direcionado a produtores rurais e ao público adulto e não
+        coletamos intencionalmente dados de crianças e adolescentes. Caso
+        identifiquemos esse tipo de coleta sem o devido consentimento dos
+        responsáveis, os dados serão eliminados.
+      </p>
+
+      <h2><i class="fas fa-rotate"></i>11. Alterações desta política</h2>
+      <p>
+        Esta Política de Privacidade poderá ser atualizada a qualquer momento.
+        Sempre que houver alterações relevantes, a data de atualização abaixo
+        será revisada. Recomendamos a consulta periódica a esta página.
+      </p>
+
+      <h2><i class="fas fa-envelope"></i>12. Contato</h2>
+      <p>
+        Em caso de dúvidas sobre esta política ou sobre o tratamento dos seus
+        dados pessoais, entre em contato:
+      </p>
+      <ul>
+        <li>
+          <strong>E-mail:</strong>
+          <a href="mailto:agrodronemrg@gmail.com">agrodronemrg@gmail.com</a>
+        </li>
+        <li><strong>Localização:</strong> Maringá — Paraná, Brasil</li>
+      </ul>
+
+      <p class="atualizado">Última atualização: 29 de maio de 2026.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2026 AgroDrone — Pulverização Inteligente. Todos os direitos
+        reservados.
+      </p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem">
+        <a href="index.html">Voltar ao site</a>
+      </p>
+    </footer>
+  </body>
+</html>

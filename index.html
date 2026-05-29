@@ -6,6 +6,12 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      // Consent Mode: nega cookies de análise até o aceite no banner (LGPD)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
       gtag('js', new Date());
       gtag('config', 'G-7YEDPM04ZY');
     </script>
@@ -590,6 +596,76 @@
           border: 2px solid white;
         }
       }
+
+      /* Cookie consent banner */
+      .cookie-banner {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #1a472a;
+        color: white;
+        padding: 1rem 2rem;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 2000;
+      }
+
+      .cookie-banner.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .cookie-banner p {
+        margin: 0;
+        font-size: 0.95rem;
+        max-width: 640px;
+      }
+
+      .cookie-banner a {
+        color: #a5d6a7;
+        font-weight: bold;
+      }
+
+      .cookie-actions {
+        display: flex;
+        gap: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      .cookie-btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 0.95rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: 2px solid white;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+
+      .cookie-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .cookie-btn.accept {
+        background: white;
+        color: #1a472a;
+      }
+
+      .cookie-btn.reject {
+        background: transparent;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .cookie-banner.show {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
     </style>
 
     <script type="application/ld+json">
@@ -871,7 +947,7 @@
             <i class="fas fa-envelope"></i>
             <div>
               <strong>E-mail:</strong><br />
-              <a href="mailto:contato@agrodrone.com.br" style="color: #2e7d32"
+              <a href="mailto:agrodronemrg@gmail.com" style="color: #2e7d32"
                 >agrodronemrg@gmail.com</a
               >
             </div>
@@ -958,7 +1034,36 @@
         Pilotos Certificados ANAC | Tecnologia e Sustentabilidade para o
         Agronegócio
       </p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem">
+        <a href="privacidade.html" style="color: #a5d6a7"
+          >Política de Privacidade</a
+        >
+      </p>
     </footer>
+
+    <!-- Banner de consentimento de cookies (LGPD) -->
+    <div
+      class="cookie-banner"
+      id="cookie-banner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Aviso de cookies"
+    >
+      <p>
+        Utilizamos cookies do Google Analytics para analisar o tráfego e
+        melhorar sua experiência. Eles só são ativados com o seu consentimento.
+        Saiba mais na nossa
+        <a href="privacidade.html">Política de Privacidade</a>.
+      </p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-btn reject" id="cookie-reject">
+          Recusar
+        </button>
+        <button type="button" class="cookie-btn accept" id="cookie-accept">
+          Aceitar
+        </button>
+      </div>
+    </div>
 
     <script>
       // Hamburger menu
@@ -1024,6 +1129,34 @@
         });
         window.open(url, "_blank");
       }
+
+      // Banner de consentimento de cookies (LGPD)
+      (function () {
+        const CONSENT_KEY = "agrodrone_cookie_consent";
+        const banner = document.getElementById("cookie-banner");
+        const stored = localStorage.getItem(CONSENT_KEY);
+
+        if (stored === "granted") {
+          gtag("consent", "update", { analytics_storage: "granted" });
+        } else if (!stored) {
+          banner.classList.add("show");
+        }
+
+        document
+          .getElementById("cookie-accept")
+          .addEventListener("click", () => {
+            localStorage.setItem(CONSENT_KEY, "granted");
+            gtag("consent", "update", { analytics_storage: "granted" });
+            banner.classList.remove("show");
+          });
+
+        document
+          .getElementById("cookie-reject")
+          .addEventListener("click", () => {
+            localStorage.setItem(CONSENT_KEY, "denied");
+            banner.classList.remove("show");
+          });
+      })();
     </script>
   </body>
 </html>
